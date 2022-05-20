@@ -24,6 +24,8 @@ public class Program
 
         services.AddSwaggerGen(setup => setup.DescribeAllParametersInCamelCase());
 
+        builder.WebHost.UseContentRoot(Directory.GetCurrentDirectory());
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Immutable;
-using SimpleShopService.Api.V1.DataContracts.Shop;
+using SimpleShopService.Domain.Shop.Models;
 
 namespace SimpleShopService.Domain.Shop;
 
@@ -35,7 +35,7 @@ internal class StockItemsProvider : IStockItemsProvider
         CreateStockItem("SKU_9077209", "Travel tag", "Travel tag for bags", 11, "travel-tag-for-bags.jpg"),
         CreateStockItem("SKU_4599796", "Document holder", "Document holder for travel", 98, "document-holder-for-travel.jpg"),
         CreateStockItem("SKU_3153695", "Gift bag set", "An assortment of 3 gift bags of sizes from 5 to 15 cm.", 54, "gift-bag-set-3-5-15.jpg"),
-        CreateStockItem("SKU_3748623", "Sunglasses case", "Sunglasses case made of microfiber.", 4, "sunglasses-case-microfiber.jpg"),
+        CreateStockItem("SKU_3748623", "Sunglasses case", "Sunglasses case.", 4, "sunglasses-case.jpg"),
         CreateStockItem("SKU_2762598", "Travel sew kit", "Small travel sew kit", 8, "small-travel-sew-kit.jpg")
     };
 
@@ -47,7 +47,7 @@ internal class StockItemsProvider : IStockItemsProvider
             Title = title,
             Description = description,
             Stock = stock,
-            ImageUrl = imageFileName
+            ImageFileName = imageFileName
         };
     }
 }
